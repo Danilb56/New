@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="Москва, история Москвы, Достопримечательности Москвы, климат Москвы">
+    <meta name="description" content="Москва - столица России. История, культура и быт города">
     <title>О Москве</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +12,7 @@
 </head>
 <body>
 <header>
-    <h1>Москва – столица России. О городе</h1>
+    <h1 class="page-title">Москва – столица России. О городе</h1>
     <nav>
         <ul>
             <li><a href="#history">История города</a></li>
@@ -82,6 +84,50 @@
                 </tr>
             </tbody>
         </table>
+    </section>
+    <section id="feedback">
+        <h2>Форма обратной связи</h2>
+        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+            <label for="fullName">ФИО:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+        
+            <p>Откуда узнали о нас:</p>
+            <input type="radio" id="internet" name="source" value="internet" required>
+            <label for="internet">Интернет</label>
+        
+            <input type="radio" id="friends" name="source" value="friends">
+            <label for="friends">Друзья</label>
+        
+            <input type="radio" id="advertising" name="source" value="advertising">
+            <label for="advertising">Реклама</label>
+            <br>
+        
+            <label for="type">Тип обращения:</label>
+            <select id="type" name="type" required>
+            <option value="complaint">Жалоба</option>
+            <option value="suggestion">Предложение</option>
+            </select>
+            <br>
+        
+            <label for="message">Текст сообщения:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <br>
+        
+            <label for="file">Вложения:</label>
+            <input type="file" id="file" name="file">
+            <br>
+        
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">Даю согласие на обработку персональных данных</label>
+            <br>
+        
+            <button type="submit">Отправить</button>
+        </form>
     </section>
 </main>
 <footer id="footer">
